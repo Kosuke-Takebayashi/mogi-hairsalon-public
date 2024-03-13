@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Beauty Sample Salon</title>
+
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="reset.css" />
+
+        <!-- Swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap" rel="stylesheet" />
+
+        <!-- font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- メインスタイルシート -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-container header-flex-container common-inner">
+                    <h1 class="header-logo">
+                        <a href="#">
+                            <img src="img/logo.svg" alt="Beauty Sample Salonのロゴ" />
+                        </a>
+                    </h1>
+
+                    <div class="header-contact">
+                        <p class="header-contact__text">ご予約はこちらまで</p>
+                        <a href="tel:000-000-000" class="header-contact__phone-number">000 0000 0000</a>
+                        <div class="sns-list header__sns-list">
+                            <a href="https://twitter.com/TECH_I_S_" target="_blank"><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+                            <i class="fa-brands fa-line fa-2x"></i>
+                            <a href="https://www.instagram.com/techis.jp/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- グローバルナビゲーション -->
+        <nav class="global-nav">
+            <button type="button" class="global-nav__button" id="js-nav-button"><i class="fa-solid fa-angle-down fa-fw" id="js-nav-arrow"></i>メニュー</button>
+            <ul class="global-nav__list common-inner" id="js-nav-list">
+                <li class="global-nav__item js-nav-item"><a href="#top" class="global-nav__link js-nav-link">TOP</a></li>
+                <li class="global-nav__item js-nav-item"><a href="#menu" class="global-nav__link js-nav-link">メニュー</a></li>
+                <li class="global-nav__item js-nav-item"><a href="#cut" class="global-nav__link js-nav-link">カット例</a></li>
+                <li class="global-nav__item js-nav-item"><a href="#sns" class="global-nav__link js-nav-link">SNS</a></li>
+                <li class="global-nav__item js-nav-item"><a href="#access" class="global-nav__link js-nav-link">アクセス</a></li>
+            </ul>
+        </nav>
+
+        <!-- スライダー -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- 各スライド -->
+                <div class="swiper-slide">
+                    <img src="img/photo-fv-1.jpeg" alt="スタイリストが女性のヘアセットをしています" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/photo-fv-2.jpeg" alt="ハサミやコームが台の上に並べられています" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/photo-fv-3.jpeg" alt="鏡と椅子が並んだ店内の様子" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/photo-fv-4.jpeg" alt="白い部屋の隅に日影ができています" />
+                </div>
+            </div>
+
+            <!-- ナビゲーション -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <!-- メニュー -->
+            <section class="menu" id="menu">
+                <div class="common-inner common-section-mb">
+                    <h2 class="section-title">Menu</h2>
+                    <div class="menu-container menu-flex-container">
+                        <div class="menu-flex-item">
+                            <div class="menu-item menu-cut-item">
+                                <h3 class="menu-item__title">Cut</h3>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">一般</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">5,000円</span>
+                                </div>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">学生</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">4,000円</span>
+                                </div>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">キッズ</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">2,000円</span>
+                                </div>
+                            </div>
+
+                            <div class="menu-item menu-color-item">
+                                <h3 class="menu-item__title">Color</h3>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">ベーシック</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">5,000円</span>
+                                </div>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">ハイライト</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">4,000円</span>
+                                </div>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">オーガニック</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">2,000円</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-flex-item">
+                            <div class="menu-item menu-perm-item">
+                                <h3 class="menu-item__title">Perm</h3>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">ベーシック</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">10,000円</span>
+                                </div>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">縮毛矯正</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">12,000円</span>
+                                </div>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">ポイント</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">7,000円</span>
+                                </div>
+                            </div>
+
+                            <div class="menu-item menu-others-item">
+                                <h3 class="menu-item__title">Others</h3>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">トリートメント</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">5,000円</span>
+                                </div>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">ヘッドスパ</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">1,000円</span>
+                                </div>
+                                <div class="menu-item__description">
+                                    <h4 class="menu-item__name">ヘアセット</h4>
+                                    <span class="menu-item__border"></span>
+                                    <span class="menu-item__price">2,000円</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- カット例 -->
+            <section class="cut" id="cut">
+                <div class="common-inner common-section-mb">
+                    <h2 class="section-title">Cut</h2>
+                    <div class="cut-container cut-grid-container">
+                        <button type="button" class="cut-img js-modal-open">
+                            <img src="img/photo-cut-1.jpg" alt="女性のカット１" width="241" height="241" />
+                        </button>
+                        <button type="button" class="cut-img js-modal-open">
+                            <img src="img/photo-cut-2.jpg" alt="女性のカット２" width="241" height="241" />
+                        </button>
+                        <button type="button" class="cut-img js-modal-open">
+                            <img src="img/photo-cut-3.jpg" alt="女性のカット３" width="241" height="241" />
+                        </button>
+                        <button type="button" class="cut-img js-modal-open">
+                            <img src="img/photo-cut-4.jpg" alt="女性のカット４" width="241" height="241" />
+                        </button>
+                        <button type="button" class="cut-img js-modal-open">
+                            <img src="img/photo-cut-5.jpg" alt="女性のカット５" width="241" height="241" />
+                        </button>
+                        <button type="button" class="cut-img js-modal-open">
+                            <img src="img/photo-cut-6.jpg" alt="女性のカット６" width="241" height="241" />
+                        </button>
+                        <button type="button" class="cut-img js-modal-open">
+                            <img src="img/photo-cut-7.jpg" alt="女性のカット７" width="241" height="241" />
+                        </button>
+                        <button type="button" class="cut-img js-modal-open">
+                            <img src="img/photo-cut-8.jpg" alt="女性のカット８" width="241" height="241" />
+                        </button>
+                    </div>
+
+                    <!-- モーダルウィンドウ -->
+                    <div class="js-modal-window">
+                        <img src="" alt="" />
+                        <!-- 閉じるボタン -->
+                        <i class="fa-solid fa-xmark modal-close-button js-modal-close"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SNS -->
+            <section class="sns" id="sns">
+                <div class="common-inner common-section-mb">
+                    <h2 class="section-title">SNS</h2>
+                    <div class="sns-container sns-flex-container">
+                        <div class="sns-flex-item">
+                            <a class="twitter-timeline" data-width="450" data-height="500" href="https://twitter.com/TECH_I_S_?ref_src=twsrc%5Etfw">Tweets by TECH_I_S_</a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                        <div class="sns-banner sns-flex-item">
+                            <div class="sns-banner__img"><img src="img/banner-line.png" alt="LINE公式アカウントでお得な情報をゲット" /></div>
+                            <div class="sns-banner__img">
+                                <a href="https://www.instagram.com/techis.jp/" target="_blank"
+                                    ><img src="img/banner-instagram.png" alt="Instagramもやってます。カット事例を随時更新。チェックしてね。"
+                                /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- リクルート -->
+            <section class="recruit common-section-mb">
+                <div class="common-inner">
+                    <div class="recruit-container">
+                        <div class="recruit-flex-container">
+                            <div class="recruit-flex-item">
+                                <h2 class="recruit-large-text">Recruit</h2>
+                            </div>
+                            <div class="recruit-flex-item recruit-flex-item--right">
+                                <p class="recruit-title">私たちと一緒に働きませんか？</p>
+                                <p class="recruit-description">現在、スタッフ・アシスタントを募集しています。18歳以上の方ならどなたでもOKです。</p>
+                                <a href="#" class="recruit-button">応募する</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- アクセス -->
+            <section class="access" id="access">
+                <div class="common-inner common-section-mb">
+                    <h2 class="section-title access__section-title">Access</h2>
+                    <span class="line"></span>
+                    <div class="access-container access-flex-container">
+                        <div class="access-flex-item access-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51840.0233301371!2d139.66799758330586!3d35.70158173037226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d2059b7fd4b%3A0xec61c68fe232efd2!2z5p2x5Lqs6YO95paw5a6_5Yy6!5e0!3m2!1sja!2sjp!4v1707716611055!5m2!1sja!2sjp"
+                                width="600"
+                                height="450"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                        <div class="access-flex-item">
+                            <div class="access-logo access-flex-item__access-logo">
+                                <img src="img/logo.svg" alt="Beauty Sample Salonのロゴ" class="logo" />
+                                <p class="access-logo__name">ビューティーサンプルサロン</p>
+                            </div>
+                            <p class="access-address access-flex-item__access-address">東京都新宿区〇〇〇〇〇〇<br />〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                            <p class="access-address access-flex-item__access-address">新宿駅西口を降りて徒歩5分</p>
+                            <a href="" class="access-tel">000 0000 0000</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <img src="img/logo-white.svg" alt="Beauty Sample Salonのロゴ" class="footer-logo" />
+                <div class="sns-list footer__sns-list">
+                    <a href="https://twitter.com/TECH_I_S_" target="_blank"><i class="fa-brands fa-x-twitter fa-2x fa-fw footer-icon"></i></a>
+                    <i class="fa-brands fa-line fa-2x fa-fw footer-icon"></i>
+                    <a href="https://www.instagram.com/techis.jp/" target="_blank"><i class="fa-brands fa-instagram fa-2x fa-fw footer-icon"></i></a>
+                </div>
+                <p class="copyright"><small>© beauty sample salon</small></p>
+            </div>
+        </footer>
+
+        <!-- メインスクリプト -->
+        <script src="main.js"></script>
+    </body>
+</html>

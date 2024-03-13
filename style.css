@@ -1,0 +1,718 @@
+@charset "utf-8";
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
+}
+
+a:hover {
+	opacity: 0.8;
+}
+
+body {
+	background: url('img/bg-body.jpg') center center repeat;
+}
+
+/*------------------------------------------
+ 共通
+-------------------------------------------*/
+.common-inner {
+	max-width: 1040px;
+	margin: auto;
+	padding: 0 3%;
+}
+
+.common-section-mb {
+	margin-bottom: 160px;
+}
+
+.section-title {
+	position: relative;
+	margin-bottom: 100px;
+	color: #003b46;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 62px;
+	font-family: "Ingrid Darling", cursive;
+	text-align: center;
+}
+
+.section-title::after {
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: .35em;
+}
+
+/*------------------------------------------
+ ヘッダー
+-------------------------------------------*/
+.header-container {
+	padding: 20px 3%;
+	box-sizing: content-box;
+}
+
+.header-flex-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-contact__text {
+	font-size: 14px;
+	text-align: center;
+}
+
+.header-contact__phone-number {
+	color: #003b46;
+	font-size: 42px;
+	font-family: "Times New Roman", serif;
+}
+
+.header-contact__phone-number::before {
+	display: inline-block;
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	margin-right: 20px;
+	background-image: url("img/icon-tel.svg");
+	background-size: cover;
+	content: "";
+}
+
+.sns-list {
+	display: flex;
+	align-items: center;
+
+	gap: 10px;
+}
+
+.header__sns-list {
+	justify-content: end;
+}
+
+/*------------------------------------------
+ グローバルナビゲーション
+-------------------------------------------*/
+.global-nav__list {}
+
+.global-nav {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 8888;
+	background-color: #66a5ad;
+}
+
+.global-nav__button {
+	display: none;
+}
+
+.global-nav__list {
+	display: flex;
+	overflow: hidden;
+}
+
+.global-nav__list.common-inner {
+	padding: 0;
+}
+
+.global-nav__item {
+	width: 20%;
+	border-left: 1px solid #c4dfe6;
+	text-align: center;
+}
+
+.global-nav__item:last-of-type {
+	border-right: 1px solid #c4dfe6;
+}
+
+.global-nav__item:hover,
+.global-nav__item:focus {
+	background-color: #07575b;
+}
+
+.global-nav__link {
+	display: inline-block;
+	width: 100%;
+	height: 62px;
+	color: #ffffff;
+	font-size: 22px;
+	line-height: 62px;
+}
+
+.global-nav__link:hover,
+.global-nav__link:focus {
+	opacity: 1;
+}
+
+/*------------------------------------------
+ スライダー
+-------------------------------------------*/
+.swiper {
+	height: 60vh;
+	padding-top: 20px;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 72.2%;
+	height: 100%;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.swiper-button-prev {
+	left: 6%;
+	width: auto;
+}
+
+.swiper-button-next {
+	right: 6%;
+	width: auto;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	display: inline-block;
+	width: 41px;
+	height: 41px;
+	border-top: 2px solid #07575b;
+	content: "";
+}
+
+.swiper-button-prev::after {
+	transform: rotate(-45deg);
+	border-left: 2px solid #07575b;
+}
+
+.swiper-button-next::after {
+	transform: rotate(45deg);
+	border-right: 2px solid #07575b;
+}
+
+/*------------------------------------------
+ メイン
+-------------------------------------------*/
+.main {
+	padding-top: 155px;
+}
+
+/* メニュー */
+.menu .section-title::after {
+	content: "メニュー";
+}
+
+.menu-flex-container {
+	display: flex;
+
+	gap: 26px;
+}
+
+.menu-flex-item {
+	width: 50%;
+	padding: 47px 57px;
+	background-color: #fff;
+}
+
+.menu-item:first-of-type {
+	margin-bottom: 44px;
+}
+
+.menu-item__title {
+	margin-bottom: 20px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	font-family: "Ingrid Darling", cursive;
+}
+
+.menu-item__title::after {
+	margin-left: .86em;
+	font-size: .6em;
+}
+
+.menu-cut-item .menu-item__title::after {
+	content: "カット";
+}
+
+.menu-color-item .menu-item__title::after {
+	content: "カラー";
+}
+
+.menu-perm-item .menu-item__title::after {
+	content: "パーマ";
+}
+
+.menu-others-item .menu-item__title::after {
+	content: "その他";
+}
+
+.menu-item__description {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+.menu-item__name {
+	min-width: 126px;
+	text-align: center;
+}
+
+.menu-item__border {
+	display: inline-block;
+	width: 170px;
+	height: 1px;
+	border-top: 1px dotted #111111;
+	content: "";
+}
+
+.menu-item__price {
+	min-width: 90px;
+	text-align: right;
+}
+
+/* カット例 */
+.cut .section-title::after {
+	content: "カット例";
+}
+
+.cut-grid-container {
+	display: grid;
+
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 25px;
+}
+
+.cut-img {
+	aspect-ratio: 1 / 1;
+}
+
+.cut-img img {
+	width: 100%;
+	height: 100%;
+
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.js-modal-window {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 9999;
+}
+
+.js-modal-window.open {
+	visibility: visible;
+	opacity: 1;
+}
+
+.js-modal-window>img {
+	width: 50%;
+	max-width: 600px;
+	height: auto;
+	max-height: 80%;
+
+	aspect-ratio: 1 / 1;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.js-modal-close {
+	position: absolute;
+	top: 1vw;
+	right: 2vw;
+	color: #ffffff;
+	font-size: 50px;
+}
+
+.modal-close-button {
+	cursor: pointer;
+}
+
+/* SNS */
+.sns .section-title::after {
+	content: "";
+}
+
+.sns-flex-container {
+	display: flex;
+	gap: 25px;
+}
+
+.sns-flex-item {
+	width: 50%;
+}
+
+.sns-banner__img img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #eeeeee;
+}
+
+.twitter-timeline {
+	margin: auto;
+}
+
+.sns-banner__img:first-child {
+	margin-bottom: 20px;
+}
+
+/* リクルート */
+.recruit {
+	padding: 50px 0;
+	background: url("img/bg-recruit.png") no-repeat center center / cover;
+}
+
+.recruit-container {
+	padding: 50px 65px;
+	background-color: rgba(255, 355, 255, .8);
+}
+
+.recruit-flex-container {
+	display: flex;
+	gap: 60px;
+}
+
+.recruit-flex-item {
+	width: 50%;
+}
+
+.recruit-flex-item--right {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.recruit-large-text {
+	transform: rotate(-13deg);
+	color: #66a5ad;
+	font-size: 180px;
+	font-family: "Ingrid Darling", cursive;
+}
+
+.recruit-title {
+	font-size: 26px;
+}
+
+.recruit-description {
+	font-size: 18px;
+}
+
+.recruit-button {
+	display: inline-block;
+	width: 100%;
+	padding: 15px;
+	background-color: #07575b;
+	color: #ffffff;
+	font-size: 20px;
+	text-align: center;
+}
+
+/* アクセス */
+.access__section-title {
+	text-align: left;
+}
+
+.access .section-title::after {
+	left: 0;
+	transform: none;
+	content: "アクセス";
+}
+
+.access .section-title::before {
+	display: inline-block;
+	position: absolute;
+	bottom: -45px;
+	transform: translateY(100%);
+	width: 100%;
+	height: 1px;
+	background-color: #66a5ad;
+	content: "";
+}
+
+.access-flex-container {
+	display: flex;
+	gap: 96px;
+}
+
+.access-flex-item {
+	width: 50%;
+}
+
+.access-map {
+	border: 3px solid #66a5ad;
+}
+
+.access-map iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.access-flex-item__access-logo {
+	margin-bottom: 41px;
+}
+
+.access-logo .logo {
+	margin-bottom: 12px;
+}
+
+.access-logo__name {
+	font-size: 14px;
+}
+
+.access-address {
+	font-size: 22px;
+}
+
+.access-flex-item__access-address {
+	margin-bottom: 46px;
+}
+
+.access-tel {
+	display: block;
+	position: relative;
+	padding: 40px 30px 20px;
+	background-color: #07575b;
+	color: #ffffff;
+	font-size: 42px;
+	font-family: "Times New Roman", serif;
+	text-align: center;
+}
+
+.access-tel::before {
+	margin-right: 19px;
+	content: '';
+	width: 33px;
+	height: 33px;
+	display: inline-block;
+	background-image: url('img/icon-tel-white.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.access-tel::after {
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 14px;
+	content: "ご予約はこちらまで";
+}
+
+/*------------------------------------------
+ フッター
+-------------------------------------------*/
+.footer {
+	background-color: #003b46;
+}
+
+.footer-inner {
+	padding: 46px 0 37px;
+	text-align: center;
+}
+
+.footer-logo {
+	margin-bottom: 33px;
+}
+
+.footer__sns-list {
+	justify-content: center;
+	margin-bottom: 44px;
+}
+
+.footer-icon {
+	color: #ffffff;
+}
+
+.copyright {
+	color: #ffffff;
+}
+
+@media screen and (max-width:1023px) {
+	.recruit-large-text {
+		font-size: 18vw;
+	}
+
+	.access-tel {
+		font-size: 34px;
+	}
+
+	.access-tel::before {
+		width: 27px;
+		height: 27px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	html {
+		scroll-padding-top: 60px;
+	}
+
+	/* 共通 */
+	.common-section-mb {
+		margin-bottom: 100px;
+	}
+
+	.section-title {
+		margin-bottom: 60px;
+		font-size: 50px;
+	}
+
+	/* ヘッダー */
+	.header-container {
+		padding: 15px;
+	}
+
+	.header-flex-container {
+		flex-direction: column;
+	}
+
+	.header-logo {
+		padding: 20px 0 45px;
+	}
+
+	.header-contact__text {
+		font-size: 12px;
+	}
+
+	.header-contact__phone-number {
+		font-size: 25px;
+	}
+
+	.header-contact__phone-number::before {
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+	}
+
+	.sns-list__img {
+		width: 18px;
+	}
+
+	.global-nav__button {
+		display: block;
+		width: 100%;
+		padding: 10px 0;
+		background-color: #07575b;
+		color: #ffffff;
+		text-align: center;
+	}
+
+	.global-nav__list {
+		flex-direction: column;
+		height: 0;
+		transition: height .3s ease;
+		position: absolute;
+		background-color: #66a5ad;
+		z-index: 100;
+		width: 100%;
+	}
+
+	.global-nav__list.is-open {
+		height: 100vh;
+	}
+
+	.global-nav__list.common-inner {
+		padding: 0;
+	}
+
+	.global-nav__item {
+		display: block;
+		width: 100%;
+		border-top: 1px solid #c4dfe6;
+		border-left: none;
+	}
+
+	.global-nav__item:last-of-type {
+		border-right: none;
+	}
+
+	.header__sns-list {
+		margin-top: 10px;
+	}
+
+	/* メイン */
+	.main {
+		padding-top: 120px;
+	}
+
+	/* メニュー */
+	.menu-flex-container,
+	.sns-flex-container,
+	.recruit-flex-container,
+	.access-flex-container {
+		flex-direction: column;
+	}
+
+	.menu-flex-item,
+	.sns-flex-item,
+	.recruit-flex-item,
+	.access-flex-item {
+		width: 100%;
+	}
+
+	/* カット例 */
+	.js-modal-window>img {
+		width: 80%;
+	}
+
+	/* リクルート */
+	.recruit-large-text {
+		font-size: 120px;
+		text-align: center;
+	}
+
+	.recruit-container {
+		padding: 30px 15px;
+	}
+
+	.recruit-flex-container {
+		gap: 40px;
+	}
+
+	/* アクセス */
+	.access-flex-container {
+		gap: 45px;
+	}
+
+	.access-address {
+		font-size: 18px;
+	}
+
+	.access-map iframe {
+		aspect-ratio: 502 / 416;
+	}
+
+	.access-tel {
+		font-size: 32px;
+	}
+
+	.access-tel::before {
+		width: 25px;
+		height: 25px;
+	}
+}
